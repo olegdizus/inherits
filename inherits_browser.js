@@ -2,7 +2,7 @@ if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
     ctor.super_ = superCtor
-    ctor.prototype = Object.create(superCtor.prototype, {
+    ctor.prototype = Object.create(superCtor.prototype || null, {
       constructor: {
         value: ctor,
         enumerable: false,
